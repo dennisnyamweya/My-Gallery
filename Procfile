@@ -1,1 +1,2 @@
-web: gunicorn mygallery.wsgi --pythonpath app --log-file - 
+
+web: gunicorn mygallery.wsgi --log-file -
