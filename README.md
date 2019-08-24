@@ -1,6 +1,7 @@
-# {Application Name}
-#### {Brief description of application}, {Date of current version}
-#### By **{List of contributors}**
+# Django Gallery
+####  A personal gallery application that you display your photos for others to see.
+, 24th August 2019
+#### By **Denis Nyamweya}**
 ## Description
 {This is a detailed description of your application, including its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }
 ## Setup/Installation Requirements
