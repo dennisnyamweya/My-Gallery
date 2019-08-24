@@ -18,7 +18,7 @@ class Category(models.Model):
             return reverse('gallery:picture_list_by_category',
                            args=[self.slug])
 
-
+#picture model
 class Picture(models.Model):
     category = models.ForeignKey(Category,related_name='pictures')
     name = models.CharField(max_length=200, db_index=True)
