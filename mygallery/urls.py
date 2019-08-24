@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^',include('gallery.urls',namespace='gallery') ),
 ]
 
+#settings debug
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT )
