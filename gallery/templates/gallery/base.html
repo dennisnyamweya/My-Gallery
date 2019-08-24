@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>{% block title %}My Gallery{% endblock %}</title>
+  <link href="{% static "css/base.css" %}" rel="stylesheet">
+</head>
+<body>
+  <div id="header">
+    <a href="/" class="logo">My Gallery</a>
+    <form class="form-inline search" role="search" action="">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search" name='image'>
+      <button class="btn" type="submit">Search</button>
+  </form>
+  </div>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>

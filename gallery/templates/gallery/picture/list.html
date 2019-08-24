@@ -1,0 +1,34 @@
+{% extends "gallery/base.html" %}
+{% load static %}
+
+{% block title %}
+  {% if category %}{{ category.name }}{% else %}Pictures{% endif %}
+{% endblock %}
+
+{% block content %}
+  <div id="sidebar">
+    <h3>Categories</h3>
+    <ul>
+      <li {% if not category %}class="selected"{% endif %}>
+        <a href="{% url "gallery:picture_list" %}">All</a>
+      </li>
+      {% for c in categories %}
+        <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+          <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div id="main" class="picture-list">
+    <h1>{% if category %}{{ category.name }}{% else %}Pictures{% endif %}</h1>
+    {% for picture in pictures %}
+      <div class="item">
+        <a href="{{ picture.get_absolute_url }}">
+          <img src="{% if picture.image %}{{ picture.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}">
+        </a>
+        <a href="{{ picture.get_absolute_url }}">{{ picture.name }}</a><br>
+        {{ picture.location }}
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

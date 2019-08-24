@@ -1,0 +1,28 @@
+{% extends "gallery/base.html" %}
+{% load static %}
+
+{% block title %}
+  {{ picture.name }}
+{% endblock %}
+
+{% block content %}
+  <div class="picture-detail">
+    <img src="{% if picture.image %}{{ picture.image.url }}{% else %}{% static "img/no_image.png" %}{% endif %}" >
+    <h1>{{ picture.name }}</h1>
+    <h2><a href="{{ picture.category.get_absolute_url }}">{{ picture.category }}</a></h2>
+    <p class="location">Location: {{ picture.location }}</p>
+    {{ picture.description|linebreaks }}
+    <input type="text" value="{{ picture.url }}" id="myInput">
+    <button onclick="myFunction()">Copy url</button>
+    <script>
+    function myFunction() {
+      var copyText = document.getElementById("myInput");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999)
+      document.execCommand("copy");
+      alert("Copied the text: " + copyText.value);
+    }
+    </script>
+    
+  </div>
+{% endblock %}
