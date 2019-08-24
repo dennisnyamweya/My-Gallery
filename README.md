@@ -21,4 +21,4 @@ There re there no issues that have not yet been resolved. If you want to let us 
 If you run into any issues or have questions, ideas or concerns. Contact me via email denisnyamweya813@gmail.com
 ### License
 *{Determine the license under which this application can be used.  See below for more details on licensing.}*
-Copyright (c) {2019} **Dennis Nyamweya}**
+Copyright (c) 2019 **Dennis Nyamweya}**
