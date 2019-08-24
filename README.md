@@ -6,7 +6,7 @@
 {This is an application that displays your photos for others to see.It has copying image url functionality.
 ## Setup/Installation Requirements
 * git clone https://github.com/dennisnyamweya/My-Gallery.git
-* cd
+* cd mygallery
 * pip install -r requirements.txt
 * create database
 * python manage.py runserver
